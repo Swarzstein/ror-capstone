@@ -1,4 +1,4 @@
-class Entity < ApplicationRecord
+class Expence < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_and_belongs_to_many :groups, dependent: :destroy
 

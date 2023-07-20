@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @expence %>
+
+<div>
+  <%= link_to "Edit this expence", edit_expence_path(@expence) %> |
+  <%= link_to "Back to expences", expences_path %>
+
+  <%= button_to "Destroy this expence", @expence, method: :delete %>
+</div>
