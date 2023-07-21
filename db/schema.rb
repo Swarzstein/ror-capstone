@@ -14,20 +14,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_030212) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "expences", force: :cascade do |t|
+  create_table "expenses", force: :cascade do |t|
     t.string "name"
     t.decimal "amount"
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_expences_on_author_id"
+    t.index ["author_id"], name: "index_expenses_on_author_id"
   end
 
-  create_table "expences_groups", id: false, force: :cascade do |t|
-    t.bigint "expence_id", null: false
+  create_table "expenses_groups", id: false, force: :cascade do |t|
+    t.bigint "expense_id", null: false
     t.bigint "group_id", null: false
-    t.index ["expence_id", "group_id"], name: "index_expences_groups_on_expence_id_and_group_id"
-    t.index ["group_id", "expence_id"], name: "index_expences_groups_on_group_id_and_expence_id"
+    t.index ["expense_id", "group_id"], name: "index_expenses_groups_on_expense_id_and_group_id"
+    t.index ["group_id", "expense_id"], name: "index_expenses_groups_on_group_id_and_expense_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -48,10 +48,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_030212) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "expences", "users", column: "author_id"
+  add_foreign_key "expenses", "users", column: "author_id"
   add_foreign_key "groups", "users"
 end
