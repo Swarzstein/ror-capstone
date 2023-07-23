@@ -1,5 +1,11 @@
 <%= form_with(model: group) do |form| %>
-  <% if group.errors.any? %>
+<div class="header">
+  <h2 class="title">New Category</h2>
+  <%= link_to "Back", groups_path, class: "header-link" %>
+  <div><%= form.submit "Save", class: "submit-button" %></div>
+</div>
+<div class="form-container">
+<% if group.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
 
@@ -20,13 +26,10 @@
     <%= form.label :icon, style: "display: block" %>
     <%= form.text_field :icon %>
   </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
+    <%= form.hidden_field :user_id, value: current_user.id %>
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+  

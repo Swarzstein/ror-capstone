@@ -1,4 +1,10 @@
-<%= form_with(model: expense) do |form| %>
+<%= form_with(model: expense, url: group_expenses_path(@group)) do |form| %>
+<div class="header">
+  <h2 class="title">New Transaction</h2>
+  <%= link_to "Back", group_path(@group), class: "header-link" %>
+  <%= form.submit "Save", class: "submit-button" %>
+</div>
+<div class="form-container">
   <% if expense.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
@@ -12,11 +18,6 @@
   <% end %>
 
   <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id %>
-  </div>
-
-  <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
@@ -27,6 +28,14 @@
   </div>
 
   <div>
+    <%= form.label :group_ids, style: "display: block" %>
+    <%= form.collection_check_boxes :group_ids, Group.all, :id, :name %>
+  </div>
+
+  <%= form.hidden_field :author_id, value: current_user.id %>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
+</div>

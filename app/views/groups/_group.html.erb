@@ -1,17 +1,18 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
-
+<div id="<%= dom_id group %>" class="card flex">
+  <div class="card-body">
+    <div class="card-image">
+      <img src=<%= group.icon %> alt=<%= group.name %>>
+    </div>
+    <div class="card-content">
+    <div>
+      <span class="left"><%= group.name %></span>
+    </div>
+    <div>
+      <span class="dark"><%= group.expenses.sum(:amount) %></span>
+    </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <p><%= group.created_at.strftime("%d-%b-%Y") %></p>
+  </div>
 </div>

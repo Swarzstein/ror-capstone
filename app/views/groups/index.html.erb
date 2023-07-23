@@ -1,14 +1,21 @@
+<div class="header">
+  <h2 class="title">Categories</h2>
+  <%= link_to 'Logout', destroy_user_session_path, 'data-turbo-method': :delete, class: "header-link" %>
+  <div></div>
+</div>
+
+<div id="groups" class="container">
 <p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
-
-<div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
+    <%= link_to group, class: "card-link" do %>
+      <%= render group %>
+    <% end %>
   <% end %>
 </div>
 
 <%= link_to "New group", new_group_path %>
+<%= link_to new_group_path, class: "create" do %>
+  <div class="create-div">
+    <span>NEW CATEGORY</span>
+  </div>
+<% end %>

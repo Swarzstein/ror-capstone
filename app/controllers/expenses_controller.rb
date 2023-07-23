@@ -12,6 +12,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
+    @group = Group.find(params[:group_id])
+    @groups = Group.all
     @expense = Expense.new
   end
 
@@ -21,11 +23,12 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
+    @group = Group.find(params[:group_id])
     @expense = Expense.new(expense_params)
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: "Expense was successfully created." }
+        format.html { redirect_to group_url(@group), notice: "Expense was successfully created." }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +68,6 @@ class ExpensesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:author_id, :name, :amount)
+      params.require(:expense).permit(:author_id, :name, :amount, group_ids: [])
     end
 end

@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @group %>
-
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
+<div class="header">
+<%= link_to "Back", groups_path, class: "header-link" %>
+<h2 class="title">Transactions</h2>
+<div></div>
 </div>
+<div class="total">
+  <h4>Total</h4>
+  <h4><%= @group.expenses.sum(:amount) %></h4>
+</div>
+
+<div id="expenses" class="container-2">
+<p style="color: green"><%= notice %></p>
+  <% @expenses.each do |expense| %>
+      <%= render expense %>
+  <% end %>
+</div>
+
+<%= link_to new_group_expense_path(@group), class: "create" do %>
+  <div class="create-div">
+    <span>NEW TRANSACTION</span>
+  </div>
+<% end %>
