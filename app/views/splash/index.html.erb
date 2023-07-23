@@ -1,4 +1,7 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
-<%= link_to "Sign up", new_user_registration_path %><br />
-<%= link_to "Log in", new_user_session_path %><br />
+<div class="splash-content">
+<h1>MyBud</h1>
+<div class="splash-buttons">
+<%= link_to "Sign up", new_user_registration_path, class: "active" %><br />
+<%= link_to "Log in", new_user_session_path, class: "inactive" %><br />
+</div>
+</div>

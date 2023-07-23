@@ -46,6 +46,41 @@ a {
   font: initial;
   font-family: 'proxima nova bold', sans-serif;
   z-index: 1;
+  font-family: 'proxima nova bold', sans-serif;
+}
+
+.splash-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'proxima nova bold', sans-serif;
+}
+
+.splash-buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+.splash-buttons a {
+  width: 94vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: #3878C2;
+  color: #fff;
+}
+
+.inactive {
+  color: #86898E;
 }
 
 .header {
