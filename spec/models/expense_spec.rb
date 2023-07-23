@@ -12,10 +12,10 @@ RSpec.describe Expense, type: :model do
       expect(expense.options[:dependent]).to eq(:destroy)
     end
   end
-  
+
   describe 'Validations' do
     # let!(:user) { User.create(name: 'John Doe') }
-    let!(:user) { User.create(name: 'John Doe', email: "johny123@gmail.com", password: "123123") }
+    let!(:user) { User.create(name: 'John Doe', email: 'johny123@gmail.com', password: '123123') }
     it 'is not valid without a name' do
       expect(Expense.new(amount: 0, author_id: user.id)).to_not be_valid
     end
@@ -32,10 +32,10 @@ RSpec.describe Expense, type: :model do
 
   describe 'getting expenses' do
     # let!(:user) { User.create(name: 'John Doe') }
-    let!(:user) { User.create(name: 'John Doe', email: "johny123@gmail.com", password: "123123") }
+    let!(:user) { User.create(name: 'John Doe', email: 'johny123@gmail.com', password: '123123') }
     let!(:group) { Group.create(name: 'Medicine', user_id: user.id) }
-    let!(:expense) { Expense.create(name: 'Gerdex', amount: 5, author_id: user.id, group_ids: ["", group.id]) }
-    let!(:expense2) { Expense.create(name: 'Acetaminofen', amount: 7, author_id: user.id, group_ids: ["", group.id]) }
+    let!(:expense) { Expense.create(name: 'Gerdex', amount: 5, author_id: user.id, group_ids: ['', group.id]) }
+    let!(:expense2) { Expense.create(name: 'Acetaminofen', amount: 7, author_id: user.id, group_ids: ['', group.id]) }
     it 'is valid with valid attributes' do
       expect(group.expenses).to eq([expense, expense2])
     end

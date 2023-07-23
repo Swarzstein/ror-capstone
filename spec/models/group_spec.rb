@@ -13,7 +13,7 @@ RSpec.describe Group, type: :model do
   # Validation tests
   describe 'Validations' do
     # let!(:user) { User.create(name: 'John Doe') }
-    let!(:user) { User.create(name: 'John Doe', email: "johny123@gmail.com", password: "123123") }
+    let!(:user) { User.create(name: 'John Doe', email: 'johny123@gmail.com', password: '123123') }
     it 'is not valid without a name' do
       expect(Group.new(user_id: user.id)).to_not be_valid
     end
@@ -23,13 +23,14 @@ RSpec.describe Group, type: :model do
   end
 
   describe 'getting groups' do
-    let!(:user) { User.create(name: 'John Doe', email: "johny123@gmail.com", password: "123123") }
+    let!(:user) { User.create(name: 'John Doe', email: 'johny123@gmail.com', password: '123123') }
     let!(:group) { Group.create(name: 'Medicine', user_id: user.id) }
     let!(:group2) { Group.create(name: 'Health Care', user_id: user.id) }
-    let!(:expense) { Expense.create(name: 'Gerdex soap', amount: 5, author_id: user.id, group_ids: ['', group.id, group2.id]) }
+    let!(:expense) do
+      Expense.create(name: 'Gerdex soap', amount: 5, author_id: user.id, group_ids: ['', group.id, group2.id])
+    end
     it 'is valid with valid attributes' do
       expect(expense.groups).to eq([group, group2])
     end
   end
-
 end
