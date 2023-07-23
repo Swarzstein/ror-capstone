@@ -13,8 +13,7 @@
   <% end %>
 </div>
 
-<%= link_to "New group", new_group_path %>
-<%= link_to new_group_path, class: "create" do %>
+<%= link_to new_group_path, {class: "create", id: "create-category"} do %>
   <div class="create-div">
     <span>NEW CATEGORY</span>
   </div>
