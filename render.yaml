@@ -1,0 +1,18 @@
+databases:
+  - name: mybudget
+    databaseName: my_budget_vyw2
+    user: schwarzstein
+
+services:
+  - type: web
+    name: mybudget
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: my_budget_vyw2
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
