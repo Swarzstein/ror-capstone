@@ -1,14 +1,13 @@
-<%= form_with(model: group) do |form| %>
+<%= form_with(model: group, html: {multipart: true}) do |form| %>
 <div class="header">
   <h2 class="title">New Category</h2>
   <%= link_to "Back", groups_path, class: "header-link" %>
-  <div><%= form.submit "Save", class: "submit-button" %></div>
+  <div class="submit-button"><%= form.submit "Save", class: "submit-button" %></div>
 </div>
 <div class="form-container">
-<% if group.errors.any? %>
+  <% if group.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
       <ul>
         <% group.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -17,19 +16,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name" %>
   </div>
-
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div class="form-divider"></div>
+  <div class="field">
+    <label class="form-button">
+      Upload an image
+      <%= form.file_field :icon %>
+    </label>
   </div>
-    <%= form.hidden_field :user_id, value: current_user.id %>
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
 </div>
+<% end %>
   
