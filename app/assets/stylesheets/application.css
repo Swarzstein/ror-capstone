@@ -229,9 +229,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-between;
   width: 94vw;
-  padding: 2vw 0;
+  padding-top: 2vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   height: 8vh;
