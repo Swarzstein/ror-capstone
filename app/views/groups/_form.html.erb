@@ -1,7 +1,9 @@
 <%= form_with(model: group, html: {multipart: true}) do |form| %>
 <div class="header">
   <h2 class="title">New Category</h2>
-  <%= link_to "Back", groups_path, class: "header-link" %>
+  <%= link_to groups_path, class: "btn btn-default header-link" do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
   <div class="submit-button"><%= form.submit "Save", class: "submit-button" %></div>
 </div>
 <div class="form-container">

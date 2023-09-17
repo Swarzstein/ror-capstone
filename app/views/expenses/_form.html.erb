@@ -1,7 +1,9 @@
 <%= form_with(model: expense, url: group_expenses_path(@group)) do |form| %>
 <div class="header">
   <h2 class="title">New Transaction</h2>
-  <%= link_to "Back", group_path(@group), class: "header-link" %>
+  <%= link_to group_path(@group), class: "btn btn-default header-link" do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
   <%= form.submit "Save", class: "submit-button" %>
 </div>
 <div class="form-container">

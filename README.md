@@ -32,8 +32,6 @@ Budget App that let you mannage your finances
 
 **MyBud** is a web application that allows users to create categories and add expenses to keep a record of them.
 
-- recorded [video](https://drive.google.com/file/d/1z9r8cTtYILywPDtHp2I5z1nkXDjs5SDg/view?usp=drive_link)
-
 ## 🛠 Built With <a name="built-with"></a>
 
 - Ruby and rails
@@ -73,6 +71,12 @@ Budget App that let you mannage your finances
 <p align="right"><a href="#readme-top">👆</a></p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+
+- You can visit the deployed project [here](https://my-budget-rbhh.onrender.com/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Video Demo <a name="live-demo"></a>
 
 - [Demo Presentation](https://drive.google.com/file/d/1CQUnMEjgPcOvf9XlpwzM3fgq4R8L0Uck/view?usp=sharing)
 
@@ -169,6 +173,7 @@ If you like this project leave a start for it.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I'd like to thank Microverse for helping us in the journey to become a Fullstack developer.
+This design is based on [Gregoire Vella's design on Behance](https://www.behance.net/gregoirevella).
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
