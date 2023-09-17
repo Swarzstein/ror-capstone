@@ -13,16 +13,17 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
 
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   /* height: 100vh; */
   font-family: 'proxima nova light', sans-serif;
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
 }
 
 a {
@@ -32,7 +33,7 @@ a {
 
 .form-container {
   position: absolute;
-  color: #989DA3;
+  color: #989da3;
   background-color: #fff;
   padding: 0 2vw;
   width: 96vw;
@@ -40,14 +41,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: #F9F9F9 2px solid;
-  border-bottom: #FCFCFC 2px solid;
+  border-top: #f9f9f9 2px solid;
+  border-bottom: #fcfcfc 2px solid;
 }
 
 .form-divider {
   width: 96vw;
   height: 0;
-  border-top: 1px solid #E3E3E3;
+  border-top: 1px solid #e3e3e3;
   align-self: flex-end;
 }
 
@@ -106,7 +107,7 @@ a {
   font-family: "proxima nova light", sans-serif;
 }
 
-::-moz-placeholder {
+:-moz-placeholder {
   font-family: "proxima nova light", sans-serif;
 }
 
@@ -121,7 +122,6 @@ a {
   font: initial;
   font-family: 'proxima nova bold', sans-serif;
   z-index: 1;
-  font-family: 'proxima nova bold', sans-serif;
 }
 
 .splash-content {
@@ -150,12 +150,12 @@ a {
 }
 
 .active {
-  background-color: #3878C2;
+  background-color: #3878c2;
   color: #fff;
 }
 
 .inactive {
-  color: #86898E;
+  color: #86898e;
 }
 
 .text-center {
@@ -198,7 +198,7 @@ a {
   position: absolute;
   width: 100vw;
 }
- 
+
 .container {
   position: fixed;
   top: 8vh;
@@ -261,7 +261,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #202023
+  color: #202023;
 }
 
 .card-image img {
@@ -269,7 +269,7 @@ a {
 }
 
 .dark {
-  color: #434C55;
+  color: #434c55;
 }
 
 .card-content-2 {
@@ -277,7 +277,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #202023
+  color: #202023;
 }
 
 .card-footer {
@@ -285,16 +285,15 @@ a {
   align-items: center;
   justify-content: center;
   font-size: small;
-  color: #989DA3;
-  background-color: #FDFDFD;
-  border-top: #FAFAFA 1px solid;
+  color: #989da3;
+  background-color: #fdfdfd;
+  border-top: #fafafa 1px solid;
   padding: 0.5vh 0;
 }
 
 .create {
   position: fixed;
   bottom: 0;
-  /* top: 80vh; */
   width: 100vw;
   height: 10vh;
   background-color: #5fb523;
