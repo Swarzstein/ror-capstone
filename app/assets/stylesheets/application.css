@@ -226,6 +226,10 @@ a {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   width: 94vw;
   padding: 2vw 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
