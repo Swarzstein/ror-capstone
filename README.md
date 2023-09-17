@@ -10,7 +10,7 @@ Budget App that let you mannage your finances
 
 - [Rails Blog App](#rails-blog-app)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog app ](#-blog-app-)
+- [📖 MyBud app ](#-mybud-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -18,6 +18,7 @@ Budget App that let you mannage your finances
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Usage](#usage)
+    - [Deployment](#triangular_flag_on_post-deployment)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -71,6 +72,12 @@ Budget App that let you mannage your finances
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Demo Presentation](https://drive.google.com/file/d/1CQUnMEjgPcOvf9XlpwzM3fgq4R8L0Uck/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Getting Started -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -111,6 +118,11 @@ To run the program use command, rails server
 rails server
 ```
 <p align="right"><a href="#readme-top">👆</a></p>
+
+### Deployment
+You can visit the deployed project [here](https://my-budget-rbhh.onrender.com/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
