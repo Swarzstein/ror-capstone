@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @group = Group.find(params[:group_id])
-    @groups = Group.all
+    @groups = current_user.groups
     @expense = Expense.new
   end
 
