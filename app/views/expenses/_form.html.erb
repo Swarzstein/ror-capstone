@@ -27,7 +27,7 @@
   <div class="form-checkboxes">
     <%= form.label "Categories" %>
     <div>
-      <%= form.collection_check_boxes :group_ids, Group.all, :id, :name, class: "checkbox" %>
+      <%= form.collection_check_boxes :group_ids, @groups, :id, :name, class: "checkbox" %>
     </div>
   </div>
   <%= form.hidden_field :author_id, value: current_user.id %>
