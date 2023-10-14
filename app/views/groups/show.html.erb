@@ -1,0 +1,24 @@
+<div class="header">
+<%= link_to groups_path, class: "btn btn-default header-link" do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+<h2 class="title">Transactions</h2>
+<div></div>
+</div>
+<div class="total">
+  <h4>Total</h4>
+  <h4><%= @group.expenses.sum(:amount) %></h4>
+</div>
+
+<div id="expenses" class="container-2">
+<p style="color: green"><%= notice %></p>
+  <% @expenses.each do |expense| %>
+      <%= render expense %>
+  <% end %>
+</div>
+
+<%= link_to new_group_expense_path(@group), class: "create" do %>
+  <div class="create-div">
+    <span>NEW TRANSACTION</span>
+  </div>
+<% end %>

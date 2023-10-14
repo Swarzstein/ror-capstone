@@ -1,0 +1,19 @@
+<div id="<%= dom_id group %>" class="card flex">
+  <div class="card-body">
+    <div class="card-image">
+      <!--img src=<%= group.icon %> alt=<%= group.name %>-->
+      <%= image_tag group.icon %>
+    </div>
+    <div class="card-content">
+    <div>
+      <span class="left"><%= group.name %></span>
+    </div>
+    <div>
+      <span class="dark"><%= group.expenses.sum(:amount) %></span>
+    </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <p><%= group.created_at.strftime("%d-%b-%Y") %></p>
+  </div>
+</div>

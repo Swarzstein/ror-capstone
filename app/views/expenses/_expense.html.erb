@@ -1,0 +1,15 @@
+<div id="<%= dom_id expense %>" class="card flex">
+  <div class="card-body">
+    <div class="card-content-2">
+    <div>
+      <span class="left"><%= expense.name %></span>
+    </div>
+    <div>
+      <span class="dark"><%= expense.amount %></span>
+    </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <p><%= expense.created_at.strftime("%d-%B-%Y") %></p>
+  </div>
+</div>

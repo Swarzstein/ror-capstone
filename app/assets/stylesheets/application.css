@@ -1,0 +1,311 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* height: 100vh; */
+  font-family: 'proxima nova light', sans-serif;
+  background-color: #f5f6f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-container {
+  position: absolute;
+  color: #989da3;
+  background-color: #fff;
+  padding: 0 2vw;
+  width: 96vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: #f9f9f9 2px solid;
+  border-bottom: #fcfcfc 2px solid;
+}
+
+.form-divider {
+  width: 96vw;
+  height: 0;
+  border-top: 1px solid #e3e3e3;
+  align-self: flex-end;
+}
+
+.form-button {
+  width: 100%;
+  height: auto;
+  border: none;
+  padding: 0 2vw;
+  font-family: 'proxima nova light', sans-serif;
+}
+
+.form-button input[type="file"] {
+  position: absolute;
+  opacity: 0; /* Make it transparent, so it doesn't display */
+  cursor: pointer;
+  width: 0;
+}
+
+.field {
+  /* margin-bottom: 2vh; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+}
+
+.field input {
+  width: 100%;
+  height: auto;
+  height: 5vh;
+  border: none;
+  padding: 0 2vw;
+}
+
+.form-checkboxes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 2vw;
+  min-height: 6vh;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.checkbox {
+  display: flex;
+  gap: 1vw;
+}
+
+::-webkit-input-placeholder {
+  font-family: "proxima nova light", sans-serif;
+}
+
+:-moz-placeholder {
+  font-family: "proxima nova light", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "proxima nova light", sans-serif;
+}
+
+.submit-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: initial;
+  font-family: 'proxima nova bold', sans-serif;
+  z-index: 1;
+}
+
+.splash-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'proxima nova bold', sans-serif;
+}
+
+.splash-buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+.splash-buttons a {
+  width: 94vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: #3878c2;
+  color: #fff;
+}
+
+.inactive {
+  color: #86898e;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  padding: 1vh 2vw;
+  width: 96vw;
+  height: 6vh;
+  background-color: #3778c2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'proxima nova bold', sans-serif;
+  text-align: center;
+}
+
+.header-link {
+  z-index: 1;
+}
+
+.total {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94vw;
+  padding: 0 3vw;
+  height: 6vh;
+  top: 8vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.title {
+  position: absolute;
+  width: 100vw;
+}
+
+.container {
+  position: fixed;
+  top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 82vh;
+  width: 100vw;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.container-2 {
+  position: fixed;
+  top: 14vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 76vh;
+  width: 100vw;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 94vw;
+  padding-top: 2vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 8vh;
+}
+
+.card-link {
+  width: 96vw;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+
+.card-image {
+  width: 15vw;
+  height: 15vw;
+}
+
+.card-content {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #202023;
+}
+
+.card-image img {
+  height: 8vh;
+}
+
+.dark {
+  color: #434c55;
+}
+
+.card-content-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #202023;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  color: #989da3;
+  background-color: #fdfdfd;
+  border-top: #fafafa 1px solid;
+  padding: 0.5vh 0;
+}
+
+.create {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #5fb523;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.create-div {
+  width: 96vw;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #fff 1px solid;
+  border-radius: 2px;
+}

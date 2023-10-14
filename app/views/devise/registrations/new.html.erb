@@ -1,0 +1,30 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="header">
+    <h2 class="title">Register</h2>
+    <%= link_to "Back", splash_index_path, class: "header-link" %>
+    <%= f.submit "Next", class: "submit-button" %>
+  </div>
+
+  <div class="form-container">
+  
+  <div class="form-divider"></div>
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+  </div>
+  <div class="form-divider"></div>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+  <div class="form-divider"></div>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+  </div>
+  <div class="form-divider"></div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
+  </div>
+<% end %>
