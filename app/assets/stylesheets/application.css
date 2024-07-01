@@ -54,10 +54,14 @@ a {
 
 .form-button {
   width: 100%;
-  height: auto;
+  height: 6vh;
   border: none;
   padding: 0 2vw;
   font-family: 'proxima nova light', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .form-button input[type="file"] {
@@ -161,8 +165,8 @@ a {
 .header {
   position: fixed;
   top: 0;
-  padding: 1vh 2vw;
-  width: 96vw;
+  padding: 1vh 3vw;
+  width: 94vw;
   height: 6vh;
   background-color: #3778c2;
   color: #fff;
@@ -203,7 +207,7 @@ a {
   align-items: center;
   height: 82vh;
   width: 100vw;
-  gap: 10px;
+  gap: 1.5vh;
   overflow-y: scroll;
 }
 
@@ -223,21 +227,20 @@ a {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 94vw;
-  padding-top: 2vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  height: 8vh;
+  height: 11vh;
 }
 
 .card-link {
   width: 96vw;
+  height: 11vh;
   text-decoration: none;
   color: #000;
   display: flex;
   justify-content: center;
-  margin-bottom: 2vh;
 }
 
 .card-body {
@@ -245,11 +248,12 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 3vw;
+  height: 7.5vh;
 }
 
 .card-image {
-  width: 15vw;
-  height: 15vw;
+  width: 7.5vh;
+  height: 7.5vh;
 }
 
 .card-content {
@@ -260,8 +264,8 @@ a {
   color: #202023;
 }
 
-.card-image img {
-  height: 8vh;
+.card-image > img {
+  height: 100%;
 }
 
 .dark {
@@ -284,7 +288,7 @@ a {
   color: #989da3;
   background-color: #fdfdfd;
   border-top: #fafafa 1px solid;
-  padding: 0.5vh 0;
+  height: 2.5vh;
 }
 
 .create {
@@ -301,11 +305,21 @@ a {
 }
 
 .create-div {
-  width: 96vw;
-  height: 9vw;
+  width: 92vw;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border: #fff 1px solid;
   border-radius: 2px;
+}
+
+#selected-image {
+  height: 90%;
+}
+
+#selected-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
