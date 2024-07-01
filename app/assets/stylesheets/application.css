@@ -176,7 +176,7 @@ a {
   position: fixed;
   top: 0;
   padding: 1vh 3vw;
-  width: 94vw;   
+  width: 94vw;  
   height: 6vh;
   background-color: #3778c2;
   color: #fff;
@@ -274,7 +274,7 @@ a {
   color: #202023;
 }
 
-.card-image img {
+.card-image > img {
   height: 100%;
 }
 
