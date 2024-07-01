@@ -24,11 +24,13 @@
   <div class="form-divider"></div>
   <div class="field">
     <label class="form-button">
+      <div id="selected-image"></div>
       Upload an image
-      <%= form.file_field :icon %>
+      <%= form.file_field :icon, id: "img-selector" %>
     </label>
   </div>
   <%= form.hidden_field :user_id, value: current_user.id %>
 </div>
 <% end %>
-  
+
+<%= javascript_include_tag "imgSelector" %>
