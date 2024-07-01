@@ -71,16 +71,6 @@ a {
   width: 0;
 }
 
-#selected-image {
-  height: 90%;
-}
-
-#selected-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .field {
   /* margin-bottom: 2vh; */
   display: flex;
@@ -176,7 +166,7 @@ a {
   position: fixed;
   top: 0;
   padding: 1vh 3vw;
-  width: 94vw;  
+  width: 94vw;
   height: 6vh;
   background-color: #3778c2;
   color: #fff;
@@ -322,4 +312,14 @@ a {
   justify-content: center;
   border: #fff 1px solid;
   border-radius: 2px;
+}
+
+#selected-image {
+  height: 90%;
+}
+
+#selected-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
